@@ -34,7 +34,10 @@ public class LightBoard
       if (onCount % 2 == 0) return false;
       else return true;
     } else {
-      
+      for (int r = 0; r < lights.length; r++)
+        if (lights[r][col]) onCount++;
+      if (onCount % 3 == 0) return true;
+      return false;
     }
   }
   public boolean[][] getLights()
